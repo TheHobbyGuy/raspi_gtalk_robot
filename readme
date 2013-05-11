@@ -1,0 +1,16 @@
+2013-05-11  Added abiltiy to run Raspi_Gtalk_Robot on startup of RaspberryPI
+You will need to do the following - copied from http://raspbpi.blogspot.co.uk/2012/12/raspi-python-script-on-startup.html
+
+copy the Gtalk file in your RaspberyPi's /etc/int.d directory or create it
+sudo nano /etc/init.d/gtalk
+
+Change Permisision to make it executable
+chmod 755 /etc/init.d/gtalk
+
+Update your services
+update-rc.d doorboot defaults
+
+Test your script
+sudo /etc/init.d/gtalk start
+
+2013-05011 Update - gtalk stop is not working, need to troubleshoot - 
