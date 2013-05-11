@@ -32,6 +32,10 @@ BOT_GTALK_USER = 'bot_username@gmail.com'
 BOT_GTALK_PASS = 'password'
 BOT_ADMIN = 'admin_username@gmail.com'
 
+#Time the Bot started
+BOT_selfstarttime = time.strftime("%Y-%m-%d %a %H:%M:%S", time.localtime())
+
+
 GPIO.setmode(GPIO.BOARD) # or GPIO.setmode(GPIO.BCM)
 ############################################################################################################################
 
@@ -124,5 +128,5 @@ class RaspiBot(GtalkRobot):
 ############################################################################################################################
 if __name__ == "__main__":
     bot = RaspiBot()
-    bot.setState('available', "Raspi Gtalk Robot")
+    bot.setState('available', "I'm Alive "+ BOT_selfstarttime)
     bot.start(BOT_GTALK_USER, BOT_GTALK_PASS)
